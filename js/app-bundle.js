@@ -310,7 +310,7 @@
 	                            var template = _.template(entryTemplateText);
 	                            var compiledTemplate = template();
 	                            $app.append(compiledTemplate);
-	                            $('#voting' + id).foundation('reveal', 'open');
+	                            $('#voting').foundation('reveal', 'open');
 	                            $(document).on('closed.fndtn.reveal', '[data-reveal]', function () {
 	                                $(document).off('closed.fndtn.reveal', '[data-reveal]');
 	                                window.location.reload();
@@ -330,7 +330,7 @@
 	                            var template = _.template(entryTemplateText);
 	                            var compiledTemplate = template();
 	                            $app.append(compiledTemplate);
-	                            $('#voting' + id).foundation('reveal', 'open');
+	                            $('#voting').foundation('reveal', 'open');
 	                            $(document).on('closed.fndtn.reveal', '[data-reveal]', function () {
 	                                $(document).off('closed.fndtn.reveal', '[data-reveal]');
 	                                window.location.reload();
@@ -346,7 +346,7 @@
 	                                var template = _.template(entryTemplateText);
 	                                var compiledTemplate = template();
 	                                $app.append(compiledTemplate);
-	                                $('#voting' + id).foundation('reveal', 'open');
+	                                $('#voting').foundation('reveal', 'open');
 	                                $(document).on('closed.fndtn.reveal', '[data-reveal]', function () {
 	                                    $(document).off('closed.fndtn.reveal', '[data-reveal]');
 	                                    window.location.reload();
@@ -366,7 +366,7 @@
 	                                var template = _.template(entryTemplateText);
 	                                var compiledTemplate = template();
 	                                $app.append(compiledTemplate);
-	                                $('#voting' + id).foundation('reveal', 'open');
+	                                $('#voting').foundation('reveal', 'open');
 	                                $(document).on('closed.fndtn.reveal', '[data-reveal]', function () {
 	                                    $(document).off('closed.fndtn.reveal', '[data-reveal]');
 	                                    window.location.reload();
@@ -2611,13 +2611,13 @@
 /* 11 */
 /***/ function(module, exports) {
 
-	module.exports = "<div id=\"voting<%=id%>\" class=\"reveal-modal\" data-reveal aria-labelledby=\"modalTitle\" aria-hidden=\"true\" role=\"dialog\">\n    <h2 id=\"modalTitle\">Wait a minute!</h2>\n    <p class=\"lead\">You must be logged in to vote!</p>\n    <a class=\"close-reveal-modal\" aria-label=\"Close\">&#215;</a>\n</div>"
+	module.exports = "<div id=\"voting\" class=\"reveal-modal\" data-reveal aria-labelledby=\"modalTitle\" aria-hidden=\"true\" role=\"dialog\">\n    <h2 id=\"modalTitle\">Wait a minute!</h2>\n    <p class=\"lead\">You must be logged in to vote!</p>\n    <a class=\"close-reveal-modal\" aria-label=\"Close\">&#215;</a>\n</div>"
 
 /***/ },
 /* 12 */
 /***/ function(module, exports) {
 
-	module.exports = "<div id=\"voting<%=id%>\" class=\"reveal-modal\" data-reveal aria-labelledby=\"modalTitle\" aria-hidden=\"true\" role=\"dialog\">\n    <h2 id=\"modalTitle\">Thanks!</h2>\n    <p class=\"lead\">Your vote was submitted.</p>\n    <a class=\"close-reveal-modal\" aria-label=\"Close\">&#215;</a>\n</div>"
+	module.exports = "<div id=\"voting\" class=\"reveal-modal\" data-reveal aria-labelledby=\"modalTitle\" aria-hidden=\"true\" role=\"dialog\">\n    <h2 id=\"modalTitle\">Thanks!</h2>\n    <p class=\"lead\">Your vote was submitted.</p>\n    <a class=\"close-reveal-modal\" aria-label=\"Close\">&#215;</a>\n</div>"
 
 /***/ },
 /* 13 */
