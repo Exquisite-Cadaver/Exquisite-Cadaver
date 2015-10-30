@@ -739,11 +739,11 @@
 	    var compiledTemplate = template();
 	    $app.append(compiledTemplate);
 	    
-	    // $('.pass').bind('keypress', function(e) {
-	    //     if (e.which == 13) {
-	    //         $('#signin').click();
-	    //     }
-	    // });
+	    $('.email').bind('keypress', function(e) {
+	        if (e.which == 13) {
+	            $('.reset').click();
+	        }
+	    });
 	    
 	    $(".reset").on('click' || 'keypress', function(){
 	        var email = $('input[class=email]').val();
@@ -795,7 +795,13 @@
 	    var compiledTemplate = template();
 	    $app.append(compiledTemplate);
 	    
-	    $(".change").on('click' || 'keypress', function(){
+	    $('.confirmPassword').bind('keypress', function(e) {
+	        if (e.which == 13) {
+	            $('.change').click();
+	        }
+	    });
+	    
+	    $('.change').on('click' || 'keypress', function(){
 	        var password = $('input[class=password]').val();
 	        var password2 = $('input[class=confirmPassword]').val();
 	          
@@ -2653,7 +2659,7 @@
 /* 19 */
 /***/ function(module, exports) {
 
-	module.exports = "<div id=\"welcomeBack\" class=\"reveal-modal\" data-reveal aria-labelledby=\"modalTitle\" aria-hidden=\"true\" role=\"dialog\">\n    <p class=\"lead\">Welcome back @<%= window.localStorage.getItem('username') %>!</p>\n    <a class=\"close-reveal-modal\" aria-label=\"Close\">&#215;</a>\n</div>"
+	module.exports = "<div id=\"welcomeBack\" class=\"reveal-modal\" data-reveal aria-labelledby=\"modalTitle\" aria-hidden=\"true\" role=\"dialog\">\n    <p class=\"lead\">Welcome @<%= window.localStorage.getItem('username') %>!</p>\n    <a class=\"close-reveal-modal\" aria-label=\"Close\">&#215;</a>\n</div>"
 
 /***/ },
 /* 20 */
@@ -2719,7 +2725,7 @@
 /* 30 */
 /***/ function(module, exports) {
 
-	module.exports = "<a href=\"#\"><button> Back to Main Menu </button></a>\n<div class=\"row\">\n  <div class=\"small-12 columns\">\n    <div class=\"signup-panel\">\n      <p class=\"welcome\"> Choose your new password </p>\n      <form>\n        <div class=\"row collapse\">\n          <div class=\"small-12 columns \">\n            <input class=\"password\" type=\"password\" placeholder=\"new password (min. 8 characters)\">\n          </div>\n        </div>\n        <div class=\"row collapse\">\n          <div class=\"small-12 columns \">\n            <input class=\"confirmPassword\" type=\"password\" placeholder=\"confirm new password\" required=\"\" name=\"confirmPassword\" data-invalid=\"\">\n          </div>\n        </div>\n      </form>\n      <button class=\"change\"> Change password </button>\n    </div>\n  </div>\n</div>"
+	module.exports = "<a href=\"#\"><button> Back to Main Menu </button></a>\n<div class=\"row\">\n  <div class=\"small-12 columns\">\n    <div class=\"signup-panel\">\n      <p class=\"welcome\"> Choose your new password </p>\n      <form>\n        <div class=\"row collapse\">\n          <div class=\"small-12 columns \">\n            <input class=\"password\" type=\"password\" placeholder=\"new password (min. 8 characters)\">\n          </div>\n        </div>\n        <div class=\"row collapse\">\n          <div class=\"small-12 columns \">\n            <input class=\"confirmPassword\" type=\"password\" placeholder=\"confirm new password\" required=\"\" name=\"confirmPassword\" data-invalid=\"\">\n          </div>\n        </div>\n        <button class=\"change\"> Change password </button>\n      </form>\n      \n    </div>\n  </div>\n</div>"
 
 /***/ },
 /* 31 */
