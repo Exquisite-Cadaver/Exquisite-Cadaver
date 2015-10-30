@@ -626,7 +626,7 @@
 
 	function userLogout() {
 
-	   var jqxhr = $.ajax({method: "POST", url: 'https://exquisite-cadaver-loopback-cathe313.c9.io/api/users/logout?access_token=' + window.localStorage.getItem('accessToken')})
+	   var jqxhr = $.ajax({method: "POST", url: retrieval.API_URL + 'users/logout?access_token=' + window.localStorage.getItem('accessToken')})
 	            .done(function(data) {
 	                window.localStorage.setItem('accessToken', -1);
 	                window.localStorage.setItem('userId', -1);
@@ -639,7 +639,7 @@
 	                
 	                $(document).on('closed.fndtn.reveal', '[data-reveal]', function () {
 	                $(document).off('closed.fndtn.reveal', '[data-reveal]');
-	                window.location.href = "app.html";
+	                window.location.href = "../index.html";
 	                });
 	            })
 	            .fail(function(jqXHR, textStatus) {
@@ -702,7 +702,7 @@
 	        }
 
 	        else{
-	            var jqxhr = $.ajax( {method: "POST", url:'https://exquisite-cadaver-loopback-cathe313.c9.io/api/users/newUser', data: {'username': username, 'email': email, 'password': password}} )
+	            var jqxhr = $.ajax( {method: "POST", url: retrieval.API_URL + 'users/newUser', data: {'username': username, 'email': email, 'password': password}} )
 	            .done(function(data) {
 	                var entryTemplateText = __webpack_require__(25);
 	                var template = _.template(entryTemplateText);
@@ -758,7 +758,7 @@
 	        }
 	        else {
 
-	            var jqxhr = $.ajax( {method: "POST", url: 'https://exquisite-cadaver-loopback-cathe313.c9.io/api/users/reset', data: {'email': email}} )
+	            var jqxhr = $.ajax( {method: "POST", url: retrieval.API_URL + 'users/reset', data: {'email': email}} )
 	            .done(function(data) {
 	                var entryTemplateText = __webpack_require__(29);
 	                var template = _.template(entryTemplateText);
